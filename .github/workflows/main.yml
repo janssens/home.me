@@ -25,10 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Install Dependencies
-      - name: Install Dependencies
+      - name: Install Dependencies with npm
         run: npm install
       # Runs gulp to build
-      - name: Run a one-line script
+      - name: Build production files using gulp
         run: gulp prod
       # Deploy
       - name: FTP Deploy
@@ -38,7 +38,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-          local-dir: /build/
+          local-dir: ./build/
           server-dir: /
           dry-run: true
           
