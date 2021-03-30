@@ -30,9 +30,6 @@ jobs:
       # Runs gulp to build
       - name: 🔥 Build production files using gulp 
         run: gulp prod
-      # test
-      - name: test
-        run: echo "${{ secrets.FTP_HOST }} ${{ secrets.FTP_USER }} ${{ secrets.FTP_PASSWORD }}"
       # Deploy
       - name: 🚀 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -43,6 +40,6 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: ./build/
-          server-dir: /
+          server-dir: ./
           dry-run: true
           
