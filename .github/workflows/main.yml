@@ -23,7 +23,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
       # Install Dependencies
       - name: 🛠️ Install Dependencies with npm
         run: npm install
@@ -32,14 +33,18 @@ jobs:
         run: gulp prod
       # Deploy
       - name: 🚀 FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        #uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: sebastianpopp/ftp-action@v2.0.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
+          #server: ${{ secrets.FTP_HOST }}
+          host: ${{ secrets.FTP_HOST }}
+          #username: ${{ secrets.FTP_USER }}
+          user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          local-dir: ./build/
-          server-dir: ./
-          dry-run: true
+          #port: 21
+          #protocol: ftp
+          #local-dir: ./build/
+          localDir: ./build/
+          #server-dir: ./
+          #dry-run: true
           
