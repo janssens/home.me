@@ -5,8 +5,8 @@ name: CI
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
+#  push:
+#    branches: [ main ]
 #  pull_request:
 #    branches: [ main ]
 
@@ -33,18 +33,14 @@ jobs:
         run: gulp prod
       # Deploy
       - name: 🚀 FTP Deploy
-        #uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        uses: sebastianpopp/ftp-action@v2.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          #server: ${{ secrets.FTP_HOST }}
-          host: ${{ secrets.FTP_HOST }}
-          #username: ${{ secrets.FTP_USER }}
-          user: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          #port: 21
-          #protocol: ftp
-          #local-dir: ./build/
-          localDir: ./build/
-          #server-dir: ./
-          #dry-run: true
+          port: 21
+          protocol: ftp
+          local-dir: ./build/
+          server-dir: ./
+          dry-run: true
           
