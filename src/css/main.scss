@@ -4,13 +4,26 @@
   filter: grayscale(1);
 }
 .stickers{
-  @apply bg-black bg-opacity-80 rounded-full p-2 w-14 h-14 mx-2 block hover:bg-opacity-90 transition-all;
+  @apply bg-black bg-opacity-60 rounded-full p-2 w-14 h-14 mx-2 block hover:bg-opacity-90 transition-all relative;
   img{
-    @apply opacity-95;
+    @apply opacity-90;
   }
   &:hover{
+    @apply bg-opacity-100;
     img{
       @apply opacity-100;
+    }
+    &:before{
+      content: attr(title);
+      @apply h-10 leading-10 -top-16 absolute bg-black rounded-xl text-white w-56 left-1/2 -ml-28 text-center shadow-2xl;
+    }
+    $largeur: 1rem;
+    &:after{
+      content: '';
+      @apply -top-6 absolute;
+      margin-left: -$largeur/2;
+      border-width: $largeur $largeur/2 0 $largeur/2;
+      border-color: black transparent transparent transparent;
     }
   }
 }

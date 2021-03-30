@@ -18,8 +18,8 @@
                     <h3 class="text-xl italic mt-2">Je suis vivant parmi les vivants</h3>
                 </div>
                 <div class="flex justify-center md:content-end w-full p-3 flex-wrap">
-                    <a href="#laferme" class="stickers" title="Notre ferme"><img src="img/growing-plant.svg" alt="Revermont et merveilles"></a>
-                    <a href="https://campus.universite-alveoles.fr" class="stickers" title="Collectif Alveoles"><img src="img/gardening-watering-can.svg" alt="les alvéoles"></a>
+                    <a href="#laferme" data-modal="true" class="stickers" title="Notre ferme"><img src="img/growing-plant.svg" alt="Revermont et merveilles"></a>
+                    <a href="https://campus.universite-alveoles.fr" class="stickers" title="Le collectif Alvéoles"><img src="img/gardening-watering-can.svg" alt="les alvéoles"></a>
                 </div>
             </div>
         </div>
@@ -51,6 +51,22 @@
         <a href="http://gaetan.janssens.free.fr/CV/cv.html">cv</a>
         <a href="#mentions" data-modal="true">mentions</a>
     </footer>
+
+    <div id="laferme" class="modal fixed inset-0 flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity">
+            <div class="overlay absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+        <div class="mx-auto inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-gradient-to-b from-gray-900 to-gray-800 py-2 px-5 uppercase text-white relative">
+                <h3>La ferme 🐑🥕🧺</h3>
+                <a class="close"><img src="img/cancel.svg" alt="x"></a>
+            </div>
+            <div class="content p-4">
+                Le site de la ferme est en construction.
+            </div>
+        </div>
+    </div>
 
     <div id="mentions" class="modal fixed inset-0 flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity">
