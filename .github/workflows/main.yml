@@ -25,18 +25,22 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Install Dependencies
-      - name: Install Dependencies with npm
+      - name: 🛠️ Install Dependencies with npm
         run: npm install
       # Runs gulp to build
-      - name: Build production files using gulp
+      - name: 🔥 Build production files using gulp 
         run: gulp prod
+      # test
+      - name: test
+        run: echo "${{ secrets.FTP_HOST }} ${{ secrets.FTP_USER }} ${{ secrets.FTP_PASSWORD }}"
       # Deploy
-      - name: FTP Deploy
+      - name: 🚀 FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           protocol: ftp
           local-dir: ./build/
           server-dir: /
