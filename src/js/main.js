@@ -8,9 +8,12 @@ let closers = document.querySelectorAll('.modal .overlay,.modal .close');
 triggers.forEach((value, index) => {
     value.addEventListener('click',function (event){
         event.preventDefault();
-        let dest = document.querySelector(event.target.getAttribute('href'));
+        let dest = document.querySelector(event.currentTarget.getAttribute('href'));
         if (dest){
             dest.style.display = 'block';
+        }else{
+            console.log(event.currentTarget);
+            console.log('target not found ('+dest+')');
         }
     })
 });

@@ -72,10 +72,10 @@ footer{
     border-color: #ffffff transparent transparent transparent;
   }
   &:before{
-    @apply bottom-1/2 left-0 absolute block md:hidden w-0 h-0;
+    @apply bottom-1/2 absolute block md:hidden w-0 h-0;
     margin-bottom: -$largeur/2;
     margin-left: -$largeur;
-
+    left: 1px;
     border-width: $largeur/2 $largeur $largeur/2 0;
     border-color: transparent #ffffff transparent transparent;
   }
