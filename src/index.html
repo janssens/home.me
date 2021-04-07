@@ -11,44 +11,57 @@
 <body class="bg-gray-200 h-screen relative">
     <h1 class="hidden">Ga&euml;tan Janssens</h1>
     <div class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 w-full h-full text-black">
-        <div class="bg-center bg-cover font-serif" style="background-image: url(./img/14113458152_9df385ee55_o.webp)">
-            <div class="grid grid-rows-2 w-full h-full bg-gradient-to-b from-white to-transparent px-4 pt-10 text-center ">
+        <div class="font-serif">
+            <div class="grid grid-rows-2 w-full h-full bg-white px-4 pt-2 md:pt-10 text-center ">
                 <div>
-                    <h2 class="text-3xl hidden md:block">🌞</h2>
-                    <h3 class="text-xl italic mt-2 hidden md:block">Je suis vivant parmi les vivants</h3>
-                    <img src="img/vivant.svg" alt="vivant" class="w-1/2 mx-auto mt-10">
+                    <div class="md:h-32 h-6 md:mt-5">
+                        <img src="img/fox-cropped.svg" alt="fox" class="md:w-48 h-full mx-auto">
+                    </div>
+                    <img src="img/vivant.svg" alt="vivant" class="md:w-1/2 w-3/4 mx-auto md:mt-10 mt-2">
+                    <h3 class="text-sm md:text-xl italic md:mt-12 max-w-sm mx-auto mt-2">J'habite la terre</h3>
                 </div>
-                <div class="flex justify-center md:content-end w-full p-3 flex-wrap">
+                <div class="justify-center md:content-end w-full p-3 flex-wrap hidden md:flex">
                     <a href="#laferme" data-modal="true" class="stickers" title="Notre ferme"><img src="img/growing-plant.svg" alt="Revermont et merveilles"></a>
                     <a href="https://campus.universite-alveoles.fr" class="stickers" title="Le collectif Alvéoles"><img src="img/gardening-watering-can.svg" alt="les alvéoles"></a>
                 </div>
+                <div class="md:hidden">
+                    <a href="#laferme" data-modal="true" title="Notre ferme" class="hover:bg-black hover:text-white border-b border-dotted my-2 uppercase border-t w-full text-center block">🥕 Notre ferme</a>
+                    <a href="https://campus.universite-alveoles.fr" title="Le collectif Alvéoles" class="hover:bg-black hover:text-white border-b border-dotted my-2 uppercase border-t w-full text-center block">🌻 Le collectif des Alvéoles</a>
+                </div>
             </div>
         </div>
-        <div class="bg-center bg-cover font-mono text-white" style="background-image: url(./img/altumcode-oZ61KFUQsus-unsplash.webp)">
-            <div class="grid grid-rows-2 w-full h-full bg-gradient-to-b from-black to-transparent px-4 pt-10 text-center ">
-                <div class="pt-10 md:pt-0">
-                    <h2 class="text-3xl hidden md:block">🖱</h2>
-                    <h3 class="text-xl mt-2 italic hidden md:block">Je construis des outils numériques à l'usage des humains</h3>
-                    <img src="img/geek.svg" alt="geek" class="w-1/3 mx-auto mt-10">
+        <div class="font-mono text-white">
+            <div class="grid grid-rows-2 w-full h-full bg-black px-4 pt-2 md:pt-10 text-center ">
+                <div class="pt-12 md:pt-0">
+                    <div class="md:h-32 h-8 md:mt-5">
+                        <img src="img/witch-hat.svg" alt="witch-hat" class="md:w-32 h-full mx-auto">
+                    </div>
+                    <img src="img/geek.svg" alt="geek" class="md:w-1/3 w-2/5 mx-auto md:mt-10">
+                    <h3 class="text-sm md:text-xl italic md:mt-12 max-w-sm mx-auto mt-2">Je construis des outils numériques à l'usage des humains</h3>
                 </div>
-                <div class="flex justify-center content-end w-full p-3 flex-wrap">
+                <div class="justify-center content-end w-full p-3 flex-wrap hidden md:flex">
                     <a href="https://github.com/janssens/" class="stickers" title="Ma page github"><img src="img/github.svg" alt="github logo"></a>
                     <a href="https://www.malt.fr/profile/gaetanjanssens" class="stickers"  title="Ma page pro"><img src="img/malt.svg" alt="malt logo"></a>
-                    <a href="https://plopcom.fr" class="stickers" title="Mon entreprise"><img src="img/drop-silhouette.svg" alt="plopcom.fr"></a>
+                    <a href="https://plopcom.fr" class="stickers" title="Ma micro entreprise"><img src="img/drop-silhouette.svg" alt="plopcom.fr"></a>
+                </div>
+                <div class="md:hidden">
+                    <a href="https://github.com/janssens/" title="Ma page github" class="bg-black hover:bg-white hover:text-black border-b border-dotted my-2 uppercase border-t w-full text-center block">Github</a>
+                    <a href="https://www.malt.fr/profile/gaetanjanssens" title="Ma page pro" class="bg-black hover:bg-white hover:text-black border-b border-dotted my-2 uppercase border-t w-full text-center block">Page pro</a>
+                    <a href="https://plopcom.fr" title="Ma micro entreprise" class="bg-black hover:bg-white hover:text-black border-b border-dotted my-2 uppercase border-t w-full text-center block">Micro entreprise</a>
                 </div>
             </div>
         </div>
     </div>
     <div id="me" class="">
         <div class="absolute top-1/2 left-1/4 md:left-1/2 md:-mt-20 -mt-16 md:-ml-20 -ml-16  rounded-full overflow-hidden w-32 md:w-40 h-32 md:h-40 border border-black">
-            <img src="img/me.webp" alt="Gaetan Janssens">
+            <img src="img/me.webp" alt="Gaetan Janssens" class="grayscale">
         </div>
         <div class="bulle w-40 bg-white border rounded-md shadow absolute top-1/2 left-1/4 md:left-1/2 md:-mt-48 md:-ml-20 ml-20 -mt-12 h-24 md:h-auto p-2">
             Bonjour 👋, <br>
             <span class="font-bold">Ga&euml;tan Janssens</span>, c'est moi !
         </div>
     </div>
-    <footer class="w-full bg-black p-3 text-white flex justify-center">
+    <footer class="w-full bg-black p-3 text-white flex justify-center border-t border-white">
         <a href="http://gaetan.janssens.free.fr/v3/">old</a>
         <a href="http://gaetan.janssens.free.fr/CV/cv.html">cv</a>
         <a href="#mentions" data-modal="true">mentions</a>
@@ -88,8 +101,6 @@
                 Icons <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
                 <a href="https://www.freepik.com" title="Freepik">Freepik</a> &
                 <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>
-                <br>
-                Photo "code" par <a href="https://unsplash.com/@altumcode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">AltumCode</a> sur Unsplash.
             </div>
         </div>
     </div>
